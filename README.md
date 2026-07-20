@@ -35,12 +35,7 @@ def contar_vizinhos_infectados(grade):
         np.roll(np.roll(infectados, -1, axis=0), 1, axis=1) +
         np.roll(np.roll(infectados, -1, axis=0), -1, axis=1)
     )
-# Filtra apenas células no estado 2 (infectado)
     return viz.astype(int)
-# a soma acima não funciona porque:
-    # os estados são 0,1,2,3. Precisamos contar APENAS os que são ==2.
-    # Correção: vamos criar uma matriz booleana (grade==2) e somar as vizinhanças.
-    # Reescrevo abaixo de forma mais clara.
 
 def difusao(grade, prob=0.1):
     n = grade.shape[0]
