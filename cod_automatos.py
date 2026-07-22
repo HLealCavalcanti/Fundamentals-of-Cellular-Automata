@@ -2,13 +2,13 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Configurações fixas
-GRID_SIZE = 100
-BETA = 0.3
-SIGMA = 0.2
-GAMMA = 0.1
-MOVEMENT_PROB = 0.1
-STEPS = 100
-SEED = 42
+GRID_SIZE = 100          # Grade 100x100
+BETA = 0.3               # Taxa de transmissão por contato
+SIGMA = 0.2              # Probabilidade diária E->I (1/período latente)
+GAMMA = 0.1              # Probabilidade diária I->R (1/período infeccioso)
+MOVEMENT_PROB = 0.1      # Probabilidade de difusão (movimento para célula vizinha)
+STEPS = 100              # Número de dias de simulação
+SEED = 42                # Semente aleatória para reprodutibilidade
 np.random.seed(SEED)
 
 # ------------------- Funções auxiliares -------------------
